@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import Avatar from "../Avatar";
 
 class UserInfo extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="userInfo">

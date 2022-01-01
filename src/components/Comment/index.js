@@ -1,15 +1,10 @@
 import UserInfo from "../UserInfo";
-
 import React, { Component } from "react";
-
-export class Comment extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  formatDate = (date) => {
-    date.toLocaleDateString();
-  };
+class Comment extends Component {
+  // explicit return required inside block, but is missing.
+  // formatDate = (date) => {date.toLocaleDateString();}
+  // no block means implicit return
+  formatDate = (date) => date.toLocaleDateString();
 
   render() {
     return (

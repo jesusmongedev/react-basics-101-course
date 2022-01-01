@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-
-export class Avatar extends Component {
-  constructor(props) {
-    super(props);
-  }
+class Avatar extends Component {
   render() {
     return (
       <img
