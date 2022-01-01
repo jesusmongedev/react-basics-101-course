@@ -1,11 +1,12 @@
 import Avatar from "../Avatar";
+import styles from "./styles.module.css";
 
 const UserInfo = ({ user }) => {
   return (
-    <div className="userInfo">
+    <div>
       <Avatar user={user} />
-      <div className="userInfo-name">
-        <h1>{user.name}</h1>
+      <div>
+        <h1 className={styles.userName}>{user.name}</h1>
       </div>
     </div>
   );

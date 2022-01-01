@@ -2,11 +2,11 @@ import Comment from "./components/Comment";
 import { comment } from "./UserData";
 import { newComment } from "./UserData";
 import { lastComment } from "./UserData";
-import "./css/style.css";
+import "./css/index.css";
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <Comment
         date={comment.date}
         text={comment.text}

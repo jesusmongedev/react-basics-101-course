@@ -1,12 +1,13 @@
 import UserInfo from "../UserInfo";
+import styles from "./styles.module.css";
 
 const Comment = ({ date, text, author }) => {
   const formatDate = () => date.toLocaleDateString();
   return (
-    <div className="comment">
+    <div className={styles.comment}>
       <UserInfo user={author} />
       <div>{text}</div>
-      <div className="comment-date">{formatDate(date)}</div>
+      <div className={styles.commentDate}>{formatDate(date)}</div>
     </div>
   );
 };
