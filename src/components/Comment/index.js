@@ -1,14 +1,25 @@
 import UserInfo from "../UserInfo";
 
-const Comment = ({ date, text, author }) => {
-  const formatDate = () => date.toLocaleDateString();
-  return (
-    <div className="comment">
-      <UserInfo user={author} />
-      <div>{text}</div>
-      <div className="comment-date">{formatDate(date)}</div>
-    </div>
-  );
-};
+import React, { Component } from "react";
+
+export class Comment extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  formatDate = (date) => {
+    date.toLocaleDateString();
+  };
+
+  render() {
+    return (
+      <div className="comment">
+        <UserInfo user={this.props.author} />
+        <div>{this.props.text}</div>
+        <div className="comment-date">{this.formatDate(this.props.date)}</div>
+      </div>
+    );
+  }
+}
 
 export default Comment;

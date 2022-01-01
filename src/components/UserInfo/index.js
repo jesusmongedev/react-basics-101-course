@@ -1,14 +1,20 @@
+import React, { Component } from "react";
 import Avatar from "../Avatar";
 
-const UserInfo = ({ user }) => {
-  return (
-    <div className="userInfo">
-      <Avatar user={user} />
-      <div className="userInfo-name">
-        <h1>{user.name}</h1>
+class UserInfo extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div className="userInfo">
+        <Avatar user={this.props.user} />
+        <div className="userInfo-name">
+          <h1>{this.props.name}</h1>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default UserInfo;
