@@ -1,27 +1,15 @@
-import Comment from "./components/Comment";
-import { comment } from "./UserData";
-import { newComment } from "./UserData";
-import { lastComment } from "./UserData";
-import "./css/index.css";
-
 function App() {
   return (
     <div>
-      <Comment
-        date={comment.date}
-        text={comment.text}
-        author={comment.author}
+      <h1>ToDo App</h1>
+      <label htmlFor="todo">New Todo:</label>
+      <input
+        type="text"
+        name="todo"
+        id="todo"
+        placeholder="What needs to be done ...?"
       />
-      <Comment
-        date={newComment.date}
-        text={newComment.text}
-        author={newComment.author}
-      />
-      <Comment
-        date={lastComment.date}
-        text={lastComment.text}
-        author={lastComment.author}
-      />
+      <button type="submit">Add</button>
     </div>
   );
 }
