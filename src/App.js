@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const App = () => {
+  // Array of Todos, by default is going to be empty
   const [todos, setTodos] = useState([]);
   // Input Todo Value
   const [inputValue, setInputValue] = useState("");
@@ -35,7 +36,9 @@ const App = () => {
       </form>
       <h2>Your Todo list:</h2>
       {todos.map((todo, index) => (
-        <p key={index}>{todo}</p>
+        <ul key={index}>
+          <li>{todo}</li>
+        </ul>
       ))}
     </div>
   );
